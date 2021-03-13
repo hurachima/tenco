@@ -1,0 +1,425 @@
+html{
+    box-sizing: border-box;
+}
+*,::before,
+*::after{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+
+
+@font-face{
+    font-family: 'Troia-Light';
+    src: url('../fonts/Troia-Light.woff') format('woff');
+    font-weight: 300;
+}
+
+
+$tittle-font:'Troia-Light';
+
+$subtittle-font:'Shippori Mincho';
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    &__logo{
+        display: flex;
+        justify-content: center;
+        margin-top: 42px;
+    }
+}
+
+
+
+
+.menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    &__link{
+        margin-left: 40px;
+        color: #000000;
+        font-size: 17px;
+        font-family: $subtittle-font;
+        position: relative;
+        &::before{
+            content: ""; 
+            display: block;
+            background-color: khaki; 
+            height: 0px;
+            width: 2px;  
+            transition: width .3s ease-in-out;
+            transition: height .3s ease-in-out;
+        }
+
+        &:hover::before{
+            height: 4px;
+            width: 100%;
+        }
+
+        &::after{
+            content: ""; 
+            display: block;
+            height: 4px;
+            width: 0;
+            background-color: khaki;
+            position:absolute;
+            left:50%;
+            transform:translateX(-50%);    
+            transition: width .3s ease-in-out;    
+        }
+        &:hover::after{
+            height: 4px;
+            width: 100%;
+        }
+
+    }
+
+}
+
+.header__main{
+    min-height: 940px;
+    background-image: url('../img/tenco-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-tittle{
+        min-height: 78px;
+        width: 587px;
+        margin-top: 30%;
+    }
+    
+
+    &-text{
+        color: #fff;
+        font-size: 55px;
+        font-family: $tittle-font;
+        text-transform: uppercase;
+
+    }  
+}
+
+.line__wrapper{
+    margin-top: 22px;
+    &-item{
+        display: block;
+        width: 1px;
+        height: 100px;
+        background: #DEDEDE;
+        margin: 0 auto;
+        
+    }
+    &:nth-child(2){
+        margin-top: 100px;
+    }
+ 
+}
+
+
+
+%card-styles{
+    min-height: 511px;
+    width: 100%;
+    max-width: 359px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 15px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.edvantages{
+    margin-top: 100px;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-text{
+        font-family: $tittle-font;
+        font-weight: 300;
+        font-size: 50px;
+        color:  #000001;
+    }
+
+    &__suptittle{
+        margin-top: 20px;
+        &-text{
+            font-size: 16px;
+            font-family: $subtittle-font;
+            color: #000001c4;
+        }
+    }
+    &__text{
+        font-size: 16px;
+        font-family: $subtittle-font;
+        color: #000001c4;
+        line-height: 33px;
+        margin-top: 20px;
+        
+    }
+
+    &__cards{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        
+        &-item-1{
+            position: relative;
+            @extend %card-styles;
+            background-image: url('../img/2.jpg');
+            &:hover .edvantages__cards-text-1{
+                transform: translateY(0);
+                opacity: 1;
+
+            }
+            
+            
+        }
+        &-item-2{
+            position: relative;
+            @extend %card-styles;
+            background-image: url('../img/3.jpg');
+            &:hover .edvantages__cards-text-2{
+                opacity: 1;
+            }
+        }
+        &-item-3{
+            position: relative;
+            @extend %card-styles;
+            background-image: url('../img/1.jpg');
+
+            &:hover .edvantages__cards-text-3{
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+        }
+        &-text-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 511px;
+            background-color: #fff;
+            padding: 230px 0;
+            padding-left: 25px;
+            transform: translateY(-100%);
+            transition-duration: .7s;
+            opacity: 0;
+            
+        }
+
+
+        &-text-2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 511px;
+            background-color: #fff;
+            padding: 230px 0;
+            padding-left: 25px;
+            //transform: translateY(-100%);
+            transition-duration: .7s;
+            opacity: 0;
+        }
+
+
+
+        &-text-3{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 511px;
+            background-color: #fff;
+            padding: 230px 0;
+            padding-left: 25px;
+            transform: translateX(89%);
+            transition-duration: .7s;
+            opacity: 0;
+        }
+
+        &-tittle{
+            font-family: $tittle-font;
+            font-weight: 300;
+            font-size: 23px;
+        }
+
+        &-suptittle{
+            font-family: $subtittle-font;
+            font-size: 16px;
+            padding-top: 20px;
+            color: #000001c4;
+        }
+
+
+
+    }
+    .cards-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44%;
+        height: 88%;
+        margin-left: 60px;
+        margin-top: 30px;
+        color: #D4AA00;
+        border: 2px solid  #D4AA00;
+        cursor: pointer;
+        font-family: $subtittle-font;
+        transition: all .3s linear;
+        &:hover{
+            background-color:#D4AA00;
+            color: #fff;
+        }
+    }
+    
+}
+
+
+.partners{
+    margin-bottom: 100px;
+    &__inner{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    &__tittle{
+        margin-top: 50px;
+        
+    }
+    &-text{
+        font-family: $tittle-font;
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+        color: hsla(0,0%,93.3%,1);
+        font-size: 18px;
+    }
+}
+
+
+
+.footer{
+    background-color: #cacaca;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    &__tittle{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    &__icons{
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    &-text{
+        font-family: $tittle-font;
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    &__copyright{
+        margin-bottom: 20px;
+    }
+
+
+    &__copyright-text{
+        font-family: $tittle-font;
+        font-weight: 100;
+        font-size: 17px;
+    }
+    
+   
+}
+.instagram{
+    padding-right: 20px;
+    &-icon{
+        height: 30px;
+        width: 30px;
+        &:hover{
+            fill: #D4AA00;
+        }
+        
+    }
+}
+
+
+.linkedin{
+    margin-top: -4px;
+    &-icon{
+        height: 30px;
+        width: 30px;
+        &:hover{
+            fill: #D4AA00;
+        }
+
+    }
+}
+
+
+
+.facebook{
+    padding-left: 20px;
+    &-icon{
+        height: 30px;
+        width: 30px;
+        fill:#010002;
+        &:hover{
+            fill: #ceb34a;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
