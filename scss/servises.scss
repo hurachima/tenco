@@ -1,0 +1,271 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Troia-Light";
+  src: url("../fonts/Troia-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+$tittle-font: "Troia-Light";
+
+$subtittle-font: "Shippori Mincho";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  &__link {
+    margin-left: 40px;
+    color: #000000;
+    font-size: 17px;
+    font-family: $subtittle-font;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      background-color: khaki;
+      height: 0px;
+      width: 2px;
+      transition: width 0.3s ease-in-out;
+      transition: height 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      height: 4px;
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 0;
+      background-color: khaki;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover::after {
+      height: 4px;
+      width: 100%;
+    }
+  }
+}
+
+.header__main {
+  min-height: 940px;
+  background-image: url("../img/servises/new_services.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-tittle {
+    min-height: 78px;
+    width: 490px;
+    margin-top: 30%;
+  }
+
+  &-text {
+    color: #fff;
+    font-size: 55px;
+    font-family: $tittle-font;
+    text-transform: uppercase;
+  }
+}
+
+%section-styles {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
+}
+
+.about {
+  &__tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    flex-wrap: wrap;
+  }
+  &__tittle-text {
+    font-family: $subtittle-font;
+    color: #444444;
+    font-size: 16px;
+    line-height: 34px;
+  }
+  &__suptittle-text {
+    font-family: $subtittle-font;
+    color: #444444;
+    font-size: 16px;
+    margin-top: 50px;
+  }
+}
+
+.personal {
+  background-image: url("../img/servises/Lifesytyle-Manager.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
+  &__tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    &-text {
+      font-family: $tittle-font;
+      font-weight: 500;
+      color: #fff;
+      font-size: 50px;
+      margin-top: 100px;
+    }
+  }
+
+  &__suptittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-text {
+      font-family: $subtittle-font;
+      font-weight: 300;
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.travel {
+  background-image: url("../img/servises/private-charter-jet.jpg");
+  @extend %section-styles;
+}
+
+.networking {
+  background-image: url("../img/servises/nasa-_SFJhRPzJHs-unsplash-scaled.jpg");
+  @extend %section-styles;
+}
+
+.events {
+  background-image: url("../img/servises/DSC_4757-copy-2.jpg");
+  @extend %section-styles;
+  margin-bottom: 70px;
+}
+
+.footer {
+  background-color: #cacaca;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__tittle {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  &-text {
+    font-family: $tittle-font;
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  &__copyright {
+    margin-bottom: 20px;
+  }
+
+  &__copyright-text {
+    font-family: $tittle-font;
+    font-weight: 100;
+    font-size: 17px;
+  }
+}
+.instagram {
+  padding-right: 20px;
+  &-icon {
+    height: 30px;
+    width: 30px;
+    &:hover {
+      fill: #d4aa00;
+    }
+  }
+}
+
+.linkedin {
+  margin-top: -4px;
+  &-icon {
+    height: 30px;
+    width: 30px;
+    &:hover {
+      fill: #d4aa00;
+    }
+  }
+}
+
+.facebook {
+  padding-left: 20px;
+  &-icon {
+    height: 30px;
+    width: 30px;
+    fill: #010002;
+    &:hover {
+      fill: #ceb34a;
+    }
+  }
+}

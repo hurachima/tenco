@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Troia-Light";
+  src: url("../fonts/Troia-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 42px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 10px;
+}
+
+.menu__link {
+  margin-left: 40px;
+  color: #000000;
+  font-size: 17px;
+  font-family: "Shippori Mincho";
+  position: relative;
+}
+
+.menu__link::before {
+  content: "";
+  display: block;
+  background-color: khaki;
+  height: 0px;
+  width: 2px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+.menu__link:hover::before {
+  height: 4px;
+  width: 100%;
+}
+
+.menu__link::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: khaki;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu__link:hover::after {
+  height: 4px;
+  width: 100%;
+}
+
+.header__main {
+  min-height: 940px;
+  background-image: url("../img/servises/new_services.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header__main__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__main-tittle {
+  min-height: 78px;
+  width: 490px;
+  margin-top: 30%;
+}
+
+.header__main-text {
+  color: #fff;
+  font-size: 55px;
+  font-family: "Troia-Light";
+  text-transform: uppercase;
+}
+
+.travel, .networking, .events {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
+}
+
+.about__tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about__tittle-text {
+  font-family: "Shippori Mincho";
+  color: #444444;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+.about__suptittle-text {
+  font-family: "Shippori Mincho";
+  color: #444444;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.personal {
+  background-image: url("../img/servises/Lifesytyle-Manager.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
+}
+
+.personal__tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.personal__tittle-text {
+  font-family: "Troia-Light";
+  font-weight: 500;
+  color: #fff;
+  font-size: 50px;
+  margin-top: 100px;
+}
+
+.personal__suptittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.personal__suptittle-text {
+  font-family: "Shippori Mincho";
+  font-weight: 300;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 100px;
+}
+
+.travel {
+  background-image: url("../img/servises/private-charter-jet.jpg");
+}
+
+.networking {
+  background-image: url("../img/servises/nasa-_SFJhRPzJHs-unsplash-scaled.jpg");
+}
+
+.events {
+  background-image: url("../img/servises/DSC_4757-copy-2.jpg");
+  margin-bottom: 70px;
+}
+
+.footer {
+  background-color: #cacaca;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__tittle {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+}
+
+.footer-text {
+  font-family: "Troia-Light";
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.footer__copyright {
+  margin-bottom: 20px;
+}
+
+.footer__copyright-text {
+  font-family: "Troia-Light";
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.instagram {
+  padding-right: 20px;
+}
+
+.instagram-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.instagram-icon:hover {
+  fill: #d4aa00;
+}
+
+.linkedin {
+  margin-top: -4px;
+}
+
+.linkedin-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.linkedin-icon:hover {
+  fill: #d4aa00;
+}
+
+.facebook {
+  padding-left: 20px;
+}
+
+.facebook-icon {
+  height: 30px;
+  width: 30px;
+  fill: #010002;
+}
+
+.facebook-icon:hover {
+  fill: #ceb34a;
+}
+/*# sourceMappingURL=servises.css.map */
