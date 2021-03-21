@@ -108,7 +108,8 @@ h6 {
 
 .header__main {
   min-height: 940px;
-  background-image: url("../img/servises/new_services.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/servises/new_services.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/servises/new_services.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -137,14 +138,6 @@ h6 {
   font-size: 55px;
   font-family: "Troia-Light";
   text-transform: uppercase;
-}
-
-.travel, .networking, .events {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  margin-top: 70px;
 }
 
 .about__tittle {
@@ -177,7 +170,8 @@ h6 {
 }
 
 .personal {
-  background-image: url("../img/servises/Lifesytyle-Manager.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/servises/Lifesytyle-Manager.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/servises/Lifesytyle-Manager.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -227,15 +221,33 @@ h6 {
 }
 
 .travel {
-  background-image: url("../img/servises/private-charter-jet.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/servises/private-charter-jet.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/servises/private-charter-jet.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
 }
 
 .networking {
-  background-image: url("../img/servises/nasa-_SFJhRPzJHs-unsplash-scaled.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/servises/nasa-_SFJhRPzJHs-unsplash-scaled.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/servises/nasa-_SFJhRPzJHs-unsplash-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
 }
 
 .events {
-  background-image: url("../img/servises/DSC_4757-copy-2.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/servises/DSC_4757-copy-2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/servises/DSC_4757-copy-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
   margin-bottom: 70px;
 }
 

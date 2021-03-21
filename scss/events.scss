@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Troia-Light";
+  src: url("../fonts/Troia-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+$tittle-font: "Troia-Light";
+
+$subtittle-font: "Shippori Mincho";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  &__link {
+    margin-left: 40px;
+    color: #000000;
+    font-size: 17px;
+    font-family: $subtittle-font;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      background-color: khaki;
+      height: 0px;
+      width: 2px;
+      transition: width 0.3s ease-in-out;
+      transition: height 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      height: 4px;
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 0;
+      background-color: khaki;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover::after {
+      height: 4px;
+      width: 100%;
+    }
+  }
+}
+
+.header__main {
+  min-height: 940px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6)),
+    url("../img/events/events-lossy-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-tittle {
+    min-height: 78px;
+    width: 490px;
+    margin-top: 30%;
+  }
+
+  &-text {
+    color: #fff;
+    font-size: 55px;
+    font-family: $tittle-font;
+    text-transform: uppercase;
+  }
+  &-suptext {
+    margin-top: 30px;
+    color: #fff;
+    font-family: $tittle-font;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+}

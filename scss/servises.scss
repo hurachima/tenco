@@ -97,7 +97,8 @@ $subtittle-font: "Shippori Mincho";
 
 .header__main {
   min-height: 940px;
-  background-image: url("../img/servises/new_services.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../img/servises/new_services.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -120,14 +121,6 @@ $subtittle-font: "Shippori Mincho";
     font-family: $tittle-font;
     text-transform: uppercase;
   }
-}
-
-%section-styles {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  margin-top: 70px;
 }
 
 .about {
@@ -153,7 +146,8 @@ $subtittle-font: "Shippori Mincho";
 }
 
 .personal {
-  background-image: url("../img/servises/Lifesytyle-Manager.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../img/servises/Lifesytyle-Manager.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -188,18 +182,33 @@ $subtittle-font: "Shippori Mincho";
 }
 
 .travel {
-  background-image: url("../img/servises/private-charter-jet.jpg");
-  @extend %section-styles;
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../img/servises/private-charter-jet.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
 }
 
 .networking {
-  background-image: url("../img/servises/nasa-_SFJhRPzJHs-unsplash-scaled.jpg");
-  @extend %section-styles;
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../img/servises/nasa-_SFJhRPzJHs-unsplash-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
 }
 
 .events {
-  background-image: url("../img/servises/DSC_4757-copy-2.jpg");
-  @extend %section-styles;
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../img/servises/DSC_4757-copy-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 70px;
   margin-bottom: 70px;
 }
 
