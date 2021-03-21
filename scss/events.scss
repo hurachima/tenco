@@ -131,3 +131,128 @@ $subtittle-font: "Shippori Mincho";
     font-size: 25px;
   }
 }
+
+.line__wrapper {
+  margin: 50px 0;
+  &-item {
+    display: block;
+    width: 1px;
+    height: 100px;
+    background: #dedede;
+    margin: 0 auto;
+  }
+}
+
+.events {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+  &__info-tittle {
+    font-family: $tittle-font;
+    font-size: 50px;
+    font-weight: 300;
+    color: #000;
+  }
+
+  &__info-text {
+    font-family: $subtittle-font;
+    font-size: 20px;
+  }
+  &__photo-item {
+    max-width: 569px;
+  }
+}
+
+.gala {
+  &__inner {
+    text-align: center;
+  }
+  &__tittle {
+    font-family: $tittle-font;
+    font-weight: 300;
+    font-size: 50px;
+    color: #000000;
+  }
+
+  &__text {
+    font-family: $subtittle-font;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  &__video {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+.video-js .vjs-big-play-button {
+  top: 50%;
+  left: 40%;
+}
+
+.vjs-theme-city {
+  --vjs-theme-city--primary: #d4aa00;
+  --vjs-theme-city--secondary: #fff;
+}
+
+.dates {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__tittle {
+    text-align: center;
+  }
+  &__tittle-text {
+    font-family: $tittle-font;
+    font-size: 50px;
+    font-weight: 300;
+    color: #000;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 36px;
+    position: relative;
+
+    align-items: center;
+    width: 530px;
+    margin: 50px 20px;
+    box-shadow: 4px 0px 8px 4px rgba(0, 0, 0, 0.2);
+
+    &-text {
+      font-family: $tittle-font;
+      font-weight: 300;
+      font-size: 35px;
+      text-align: center;
+      margin: 20px 0;
+      padding-bottom: 36px;
+    }
+  }
+
+  // &__circle {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 3rem;
+  //   width: 3em;
+  //   background-color: yellow;
+  //   border-radius: 50%;
+  // }
+}
+
+.video {
+  width: 450px;
+  height: 250px;
+}
